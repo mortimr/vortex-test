@@ -4,6 +4,7 @@ import SimpleStorageContract from '../build/contracts/SimpleStorage.json'
 import {TransactionPanel} from "./demo-sections/transactions";
 import {Grid, Row, Col} from 'react-bootstrap';
 import Web3 from 'web3';
+import {Overlay} from "./demo-sections/left-overlay";
 
 import './css/oswald.css'
 import './css/open-sans.css'
@@ -41,6 +42,11 @@ class App extends Component {
                                     <Row>
                                         <Col xs={6}>
                                             <TransactionPanel/>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={6}>
+                                            <Overlay/>
                                         </Col>
                                     </Row>
                                 </Grid>
