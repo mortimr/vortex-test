@@ -11,6 +11,7 @@ import './css/open-sans.css'
 import './css/pure-min.css'
 import './App.css'
 import {FeedNotifications} from "./demo-sections/feed-notifications";
+import {ListTransactions} from "./demo-sections/list_transactions";
 
 class App extends Component {
     constructor(props) {
@@ -39,6 +40,9 @@ class App extends Component {
                                     <Row>
                                         <Col xs={6}>
                                             <TransactionPanel/>
+                                        </Col>
+                                        <Col xs={6}>
+                                            <ListTransactions/>
                                         </Col>
                                     </Row>
                                     <Row>
