@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Panel, HelpBlock, Checkbox, Radio, FormGroup, ControlLabel, FormControl, Button} from 'react-bootstrap';
+import {Panel, HelpBlock, FormGroup, ControlLabel, FormControl, Button} from 'react-bootstrap';
 import {connect} from 'vort_x-components';
 
 function FieldGroup({ id, label, help, ...props }) {

@@ -1,35 +1,28 @@
 import React, { Component } from 'react'
 import {VortexGate, VortexWeb3Loaded, VortexWeb3LoadError, VortexWeb3NetworkError, VortexWeb3Loading, VortexMetamaskLoader} from "vort_x-components";
 import SimpleStorageContract from '../build/contracts/SimpleStorage.json'
-import {TransactionPanel} from "./demo-sections/transactions";
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Col} from 'react-bootstrap';
 import Web3 from 'web3';
-import {Overlay} from "./demo-sections/left-overlay";
 
 import './css/oswald.css'
 import './css/open-sans.css'
 import './css/pure-min.css'
 import './App.css'
+
+import {TransactionPanel} from "./demo-sections/transactions";
+import {Overlay} from "./demo-sections/left-overlay";
 import {FeedNotifications} from "./demo-sections/feed-notifications";
-import {ListTransactions} from "./demo-sections/list_transactions";
+import {ListTransactions} from "./demo-sections/list-transactions";
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            storageValue: 0,
-        }
-    }
-
-
     render() {
         return (
             <VortexGate contracts={[SimpleStorageContract]} network_contracts={[SimpleStorageContract]} loader={VortexMetamaskLoader(Web3)}>
+
+
                 <VortexWeb3Loaded>
                     <FeedNotifications>
                         <div className="App">
-
                             <main className="container">
                                 <div className="pure-g">
                                     <div className="pure-u-1-1">
@@ -51,6 +44,8 @@ class App extends Component {
                         </div>
                     </FeedNotifications>
                 </VortexWeb3Loaded>
+
+
                 <VortexWeb3Loading>
                     <div className="App">
 
@@ -63,6 +58,8 @@ class App extends Component {
                         </main>
                     </div>
                 </VortexWeb3Loading>
+
+
                 <VortexWeb3LoadError>
                     <div className="App">
 
@@ -76,6 +73,8 @@ class App extends Component {
                         </main>
                     </div>
                 </VortexWeb3LoadError>
+
+
                 <VortexWeb3NetworkError>
                     <div className="App">
 
@@ -89,6 +88,8 @@ class App extends Component {
                         </main>
                     </div>
                 </VortexWeb3NetworkError>
+
+
             </VortexGate>
         );
     }
