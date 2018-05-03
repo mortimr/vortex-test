@@ -37,19 +37,15 @@ class App extends Component {
                                     </div>
                                 </div>
                                 <Grid>
-                                    <Row>
-                                        <Col xs={6}>
-                                            <TransactionPanel/>
-                                        </Col>
-                                        <Col xs={6}>
-                                            <ListTransactions/>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col xs={6}>
-                                            <Overlay/>
-                                        </Col>
-                                    </Row>
+                                    <Col xs={6}>
+                                        <TransactionPanel/>
+                                    </Col>
+                                    <Col xs={6}>
+                                        <ListTransactions/>
+                                    </Col>
+                                    <Col xs={6}>
+                                        <Overlay/>
+                                    </Col>
                                 </Grid>
                             </main>
                         </div>

@@ -25,9 +25,7 @@ class TxContainer extends React.Component {
             return <Panel bsStyle={status}>
                 <Panel.Heading>{this.props.tx.status.transaction_hash}</Panel.Heading>
                 <Panel.Body>
-                    <h3>{this.props.tx.status.type}</h3>
-                </Panel.Body>
-                <Panel.Body>
+                    <h4>{this.props.tx.status.type}</h4>
                     <p>Transaction
                         from {this.props.tx.transaction_arguments.from} to {this.props.tx.transaction_arguments.to} for {parseInt(this.props.tx.transaction_arguments.value, 16)} WΞI</p>
                 </Panel.Body>
@@ -42,7 +40,7 @@ export class ListTransactions extends React.Component {
     render() {
         return <Panel>
             <Panel.Heading>Very REACTive data !</Panel.Heading>
-            <Panel.Body>
+            <Panel.Body style={{maxHeight: 400, overflow: 'scroll'}}>
                 <VortexTransactionsList element={TxContainer}/>
             </Panel.Body>
         </Panel>
