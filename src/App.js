@@ -13,6 +13,7 @@ import {TransactionPanel} from "./demo-sections/transactions";
 import {Overlay} from "./demo-sections/left-overlay";
 import {FeedNotifications} from "./demo-sections/feed-notifications";
 import {ListTransactions} from "./demo-sections/list-transactions";
+import {ListContracts} from "./demo-sections/list-contracts";
 
 class App extends Component {
     render() {
@@ -35,6 +36,9 @@ class App extends Component {
                                     </Col>
                                     <Col xs={6}>
                                         <ListTransactions/>
+                                    </Col>
+                                    <Col xs={6}>
+                                        <ListContracts/>
                                     </Col>
                                     <Col xs={6}>
                                         <Overlay/>
