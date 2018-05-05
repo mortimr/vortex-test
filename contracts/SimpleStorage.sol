@@ -4,6 +4,8 @@ contract SimpleStorage {
   uint storedData;
 
   function set(uint x) public {
+    if (x == 5)
+      revert();
     storedData = x;
   }
 
