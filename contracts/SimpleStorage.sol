@@ -7,6 +7,10 @@ contract SimpleStorage {
     storedData = x;
   }
 
+  function times(uint x) public view returns (uint) {
+    return storedData * x;
+  }
+
   function get() public view returns (uint) {
     return storedData;
   }
