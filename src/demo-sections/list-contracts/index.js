@@ -1,7 +1,8 @@
 import * as React from "react";
-import {VortexContractsList, connect, VortexContract} from 'vort_x-components';
+import {VortexContractsList, connect, VortexMethodCallList} from 'vort_x-components';
 import {FormGroup, ControlLabel, FormControl, HelpBlock, Button} from 'react-bootstrap';
 import {Panel} from "react-bootstrap";
+import {CallContainer, SingleCall} from "../list-method-calls";
 
 function FieldGroup({ id, label, help, ...props }) {
     return (
@@ -15,15 +16,15 @@ function FieldGroup({ id, label, help, ...props }) {
 
 class ContractCallReturnContainer extends React.Component {
 
-   constructor(props) {
-       super(props);
-       this.newValue = this.newValue.bind(this);
-   }
+    constructor(props) {
+        super(props);
+        this.newValue = this.newValue.bind(this);
+    }
 
-   newValue(event) {
-       event.preventDefault();
-       this.props.update(this.newVal.valueAsNumber);
-   }
+    newValue(event) {
+        event.preventDefault();
+        this.props.update(this.newVal.valueAsNumber);
+    }
 
     render() {
         return (<div>
@@ -62,6 +63,13 @@ class ContractsContainer extends React.Component {
             return <Panel bsStyle="primary">
                 <Panel.Heading>{this.props.contract_name} : {this.props.contract_address}</Panel.Heading>
                 <Panel.Body>
+                    <VortexMethodCallList container={CallContainer} element={SingleCall} methodName="times" contractName={this.props.contract_name} contractAddress={this.props.contract_address} arguments={
+                        [
+                            [{from: this.props.web3.coinbase}, 2],
+                            [{from: this.props.web3.coinbase}, 3],
+                            [{from: this.props.web3.coinbase}, 4]
+                        ]
+                    }/>
                     <this.resultContainer/>
                 </Panel.Body>
             </Panel>;
@@ -74,8 +82,8 @@ export class ListContracts extends React.Component {
 
     render() {
         return <Panel>
-            <Panel.Heading>Very REACTive data !</Panel.Heading>
-            <Panel.Body style={{maxHeight: 400, overflow: 'scroll'}}>
+            <Panel.Heading>List all of your contracts very easily !</Panel.Heading>
+            <Panel.Body>
                 <VortexContractsList element={ContractsContainer} contract_name="SimpleStorage"/>
             </Panel.Body>
         </Panel>

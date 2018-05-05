@@ -17,7 +17,8 @@ class TxContainer extends React.Component {
                     status_title = "Transaction has been confirmed " + this.props.tx.status.transaction_confirmation_count + " times";
                     break;
                 case 'RECEIPT':
-                    status_title = "Transaction receipt has been received, waiting for confimations";
+                    status = "success";
+                    status_title = "Transaction receipt has been received";
                     break ;
                 case 'ERROR':
                     status = "danger";
