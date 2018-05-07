@@ -14,6 +14,7 @@ import {Overlay} from "./demo-sections/left-overlay";
 import {FeedNotifications} from "./demo-sections/feed-notifications";
 import {ListTransactions} from "./demo-sections/list-transactions";
 import {ListContracts} from "./demo-sections/list-contracts";
+import {AccountFollower} from "./demo-sections/account_follower";
 
 class App extends Component {
     render() {
@@ -42,6 +43,9 @@ class App extends Component {
                                     </Col>
                                     <Col xs={6}>
                                         <Overlay/>
+                                    </Col>
+                                    <Col xs={6}>
+                                        <AccountFollower/>
                                     </Col>
                                 </Grid>
                             </main>

@@ -26,6 +26,11 @@ class ListElement extends Component {
                 this.title = "New Error";
                 this.body = this.props.data.error.message;
                 break;
+            case 'NEW_ACCOUNT':
+                this.title = "New Account";
+                this.body = "Following account " + this.props.data.account;
+                this.style = "primary";
+                break;
             default:
                 this.title = "Unknown action";
         }
@@ -69,7 +74,7 @@ export class Overlay extends Component {
                         from='left'
                         width={(Math.floor(window.innerWidth * 0.3)).toString() + "px"}
                         onRequestClose={ () => this.setState({ isPaneOpenLeft: false }) }>
-                        <VortexFeedList filter={FeedType.Contracts | FeedType.Errors | FeedType.Transactions} element={ListElement}/>
+                        <VortexFeedList filter={FeedType.Contracts | FeedType.Errors | FeedType.Transactions | FeedType.Accounts } element={ListElement}/>
                     </SlidingPane>
                 </div>
             </Panel.Body>
