@@ -32,7 +32,7 @@ class _TransactionPanel extends React.Component {
 
     render() {
         return (<Panel>
-            <Panel.Heading>Send some transaction !</Panel.Heading>
+            <Panel.Heading>Example #1: Send some transaction !</Panel.Heading>
             <Panel.Body>
                 <div>
                     <p>You can send some transactions for here. You will see any component connected on transactions update instantly when new transactions are emitted, or when your transactions update their states. You can install the <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=fr">Redux DevTools</a> to visualize live changes in the state ! Don't be afraid to create errored transaction to see what happens in the store !</p>

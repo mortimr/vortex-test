@@ -4,9 +4,9 @@ import {Panel} from "react-bootstrap";
 export class SingleCall extends React.Component {
     render() {
         return (
-            <p>
-                Result is => {this.props.result}
-            </p>
+            <li>
+                Result is {this.props.result}
+            </li>
         )
     }
 }
@@ -15,10 +15,12 @@ export class CallContainer extends React.Component {
     render() {
         return (
             <Panel bsStyle="primary">
-                <Panel.Heading>Call List</Panel.Heading>
+                <Panel.Heading>Example #4: Constant Method Call List</Panel.Heading>
                 <Panel.Body>
                     <div>
+                        <ul>
                         {this.props.children}
+                        </ul>
                     </div>
                 </Panel.Body>
             </Panel>

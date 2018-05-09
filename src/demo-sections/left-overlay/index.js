@@ -28,7 +28,7 @@ class ListElement extends Component {
                 break;
             case 'NEW_ACCOUNT':
                 this.title = "New Account";
-                this.body = "Following account " + this.props.data.account;
+                this.body = "Following accounts.md " + this.props.data.account;
                 this.style = "primary";
                 break;
             default:
@@ -61,9 +61,9 @@ export class Overlay extends Component {
 
     render() {
         return <Panel>
-            <Panel.Heading >Press this magic button !</Panel.Heading>
+            <Panel.Heading >Example #5: Press this magic button !</Panel.Heading>
             <Panel.Body>
-                <p>You can easily access all the data created by your user's activity. This is a great tool to give more informations to the user about what is happening behind the scene.</p>
+                <p>You can easily access all the data created by your user activity. This is a great tool to give more informations to the user about what is happening behind the scene.</p>
                 <div ref={ref => this.el = ref}>
                     <Button onClick={ () => this.setState({ isPaneOpenLeft: true }) }>
                         This is the Magic Button, press me if you want to see puuuuuure magic

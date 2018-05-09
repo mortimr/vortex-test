@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {VortexGate, VortexWeb3Loaded, VortexWeb3LoadError, VortexWeb3NetworkError, VortexWeb3Loading, VortexMetamaskLoader} from "vort_x-components";
 import SimpleStorageContract from '../build/contracts/SimpleStorage.json'
-import {Grid, Col} from 'react-bootstrap';
+import {Grid, Col, Panel} from 'react-bootstrap';
 import Web3 from 'web3';
 
 import './css/oswald.css'
@@ -45,7 +45,12 @@ class App extends Component {
                                         <Overlay/>
                                     </Col>
                                     <Col xs={6}>
-                                        <AccountFollower/>
+                                        <Panel bsStyle="primary">
+                                            <Panel.Heading>Example #6: Instant Balances</Panel.Heading>
+                                            <Panel.Body>
+                                                <AccountFollower/>
+                                            </Panel.Body>
+                                        </Panel>
                                     </Col>
                                 </Grid>
                             </main>
