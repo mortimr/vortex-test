@@ -1,7 +1,6 @@
 {
-  "name": "react-box",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vort_x-demo",
+  "version": "1.0.0",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
