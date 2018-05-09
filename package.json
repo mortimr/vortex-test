@@ -54,6 +54,7 @@
     "react-dom": "^15.4.2",
     "react-notification-system": "^0.2.17",
     "react-sliding-pane": "^2.0.2",
+    "vort_x-components": "^1.0.4",
     "web3": "^1.0.0-beta.34"
   },
   "scripts": {
