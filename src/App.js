@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {VortexGate, VortexWeb3Loaded, VortexWeb3LoadError, VortexWeb3NetworkError, VortexWeb3Loading, VortexMetamaskLoader} from "vort_x-components";
-import SimpleStorageContract from '../build/contracts/SimpleStorage.json'
+import SimpleStorage from '../build/contracts/SimpleStorage.json'
 import {Grid, Col, Panel} from 'react-bootstrap';
 import Web3 from 'web3';
 
@@ -19,7 +19,11 @@ import {AccountFollower} from "./demo-sections/account_follower";
 class App extends Component {
     render() {
         return (
-            <VortexGate contracts={[SimpleStorageContract]} network_contracts={[SimpleStorageContract]} loader={VortexMetamaskLoader(Web3)}>
+            <VortexGate contracts={{
+                type: 'truffle',
+                contracts: [SimpleStorage],
+                preloaded_contracts: ["SimpleStorage"]
+            }} network_contracts={[SimpleStorage]} loader={VortexMetamaskLoader(Web3)}>
 
 
                 <VortexWeb3Loaded>

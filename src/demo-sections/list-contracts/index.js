@@ -51,7 +51,7 @@ class ContractsContainer extends React.Component {
             return {
                 result: state.contracts[this.props.contract_name][this.props.contract_address].instance.vortex.get.vortexData({from: this.props.web3.coinbase}),
                 update: (newValue) => {
-                    this.props.contract.instance.vortex.set.vortexSend({from: this.props.web3.coinbase, gas: 20000000}, newValue);
+                    this.props.contract.instance.vortex.set.vortexSend({from: this.props.web3.coinbase, gas: 100000}, newValue);
                 }
             }
         };
