@@ -9,6 +9,24 @@
 
 ### [Documentation](https://vort-x.readthedocs.io/en/master/tutorial)
 
+### Running the Demo
+
+In one terminal
+```
+npm install -g ganache-cli truffle
+ganache-cli -p 8545
+```
+
+And in another one
+```
+cd vortex-demo
+npm install
+truffle migrate
+npm start
+```
+
+And visit localhost on port 3000 !
+
 ### Live Transaction Data
 
 ![Live Transaction Data](https://raw.githubusercontent.com/Horyus/vortex-demo/master/.assets/LiveTransactionData.png)
