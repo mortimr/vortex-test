@@ -7,7 +7,7 @@
 <img width="25%" src="https://raw.githubusercontent.com/Horyus/vortex-demo/master/https://raw.githubusercontent.com/Horyus/vortex-demo/master/.assets/VortexDemo.png">
 </div>
 
-### [Documentation](https://vort-x.readthedocs.io/en/master/tutorial)
+### [Documentation](https://vort-x.readthedocs.io/en/develop/tutorial)
 
 ### Running the Demo
 
@@ -47,3 +47,8 @@ And visit localhost on port 3000 !
 ### Event Feed
 
 ![Event Feed](https://raw.githubusercontent.com/Horyus/vortex-demo/master/.assets/EventFeed.png)
+
+### IPFS Content Fetching
+
+![IPFS Fetching](https://raw.githubusercontent.com/Horyus/vortex-demo/master/.assets/IpfsFetching.png)
+
