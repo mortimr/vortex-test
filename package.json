@@ -49,12 +49,14 @@
   },
   "dependencies": {
     "dotenv": "^2.0.0",
+    "is-ipfs": "^0.3.2",
     "react": "^15.4.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^15.4.2",
     "react-notification-system": "^0.2.17",
     "react-sliding-pane": "^2.0.2",
-    "vort_x-components": "^1.0.8",
+    "vort_x": "^1.0.1-alpha",
+    "vort_x-components": "^1.0.8-alpha",
     "web3": "^1.0.0-beta.34"
   },
   "scripts": {
