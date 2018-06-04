@@ -24,6 +24,9 @@ class _FeedNotifications extends React.Component {
                     case 'NEW_TRANSACTION':
                         this._notificationSystem.addNotification({position: 'br', title: 'New Transaction Broadcasted', message: nextProps.feed[start_idx].transaction_hash, level: 'success'});
                         break ;
+                    case 'NEW_IPFS_CONTENT':
+                        this._notificationSystem.addNotification({position: 'br', title: 'New IPFS Content Fetched', message: nextProps.feed[start_idx].ipfs_hash, level: 'info'});
+                        break ;
                     default:
                         break ;
                 }
