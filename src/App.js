@@ -1,30 +1,18 @@
 import React, { Component } from 'react'
 import {VortexGate, VortexWeb3Loaded, VortexWeb3LoadError, VortexWeb3NetworkError, VortexWeb3Loading, VortexWeb3Locked, VortexMetamaskLoader} from "vort_x-components";
-import SimpleStorage from '../build/contracts/SimpleStorage.json'
-import {Grid, Col, Panel} from 'react-bootstrap';
+import MyToken from '../build/contracts/MyToken.json'
 import Web3 from 'web3';
-
-import './css/oswald.css'
-import './css/open-sans.css'
-import './css/pure-min.css'
-import './App.css'
-
-import {TransactionPanel} from "./demo-sections/transactions";
-import {Overlay} from "./demo-sections/left-overlay";
 import {FeedNotifications} from "./demo-sections/feed-notifications";
-import {ListTransactions} from "./demo-sections/list-transactions";
-import {ListContracts} from "./demo-sections/list-contracts";
-import {AccountFollower} from "./demo-sections/account_follower";
-import {IPFSFetcher} from './demo-sections/ipfs-fetcher';
+import {Balances} from "./demo-sections/balances";
 
 class App extends Component {
     render() {
         return (
             <VortexGate contracts={{
                 type: 'truffle',
-                truffle_contracts: [SimpleStorage],
-                preloaded_contracts: ["SimpleStorage"]
-            }} network_contracts={[SimpleStorage]} loader={VortexMetamaskLoader(Web3)}>
+                truffle_contracts: [MyToken],
+                preloaded_contracts: ["MyToken"]
+            }} network_contracts={[MyToken]} loader={VortexMetamaskLoader(Web3)}>
 
 
                 <VortexWeb3Loaded>
@@ -35,32 +23,11 @@ class App extends Component {
                                     <div className="pure-u-1-1">
                                         <h1>VortΞx Demo Loaded !</h1>
                                     </div>
+                                    <div>
+                                        <Balances MyToken={['0x0d0020758c4f1f85b2b89322ff01a67ce30fb0f8']} account='0xe87529a6123a74320e13a6dabf3606630683c029' />
+                                    </div>
                                 </div>
-                                <Grid>
-                                    <Col xs={6}>
-                                        <TransactionPanel/>
-                                    </Col>
-                                    <Col xs={6}>
-                                        <ListTransactions/>
-                                    </Col>
-                                    <Col xs={6}>
-                                        <ListContracts/>
-                                    </Col>
-                                    <Col xs={6}>
-                                        <IPFSFetcher/>
-                                    </Col>
-                                    <Col xs={6}>
-                                        <Overlay/>
-                                    </Col>
-                                    <Col xs={6}>
-                                        <Panel bsStyle="primary">
-                                            <Panel.Heading>Example #6: Instant Balances</Panel.Heading>
-                                            <Panel.Body>
-                                                <AccountFollower/>
-                                            </Panel.Body>
-                                        </Panel>
-                                    </Col>
-                                </Grid>
+                                
                             </main>
                         </div>
                     </FeedNotifications>
