@@ -3,7 +3,7 @@ import {VortexGate, VortexWeb3Loaded, VortexWeb3LoadError, VortexWeb3NetworkErro
 import MyToken from '../build/contracts/MyToken.json'
 import Web3 from 'web3';
 import {FeedNotifications} from "./demo-sections/feed-notifications";
-import {Balances} from "./demo-sections/balances";
+import {BalancesList} from "./demo-sections/balances";
 
 class App extends Component {
     render() {
@@ -24,7 +24,7 @@ class App extends Component {
                                         <h1>VortΞx Demo Loaded !</h1>
                                     </div>
                                     <div>
-                                        <Balances MyToken={['0x0d0020758c4f1f85b2b89322ff01a67ce30fb0f8']} account='0xe87529a6123a74320e13a6dabf3606630683c029' />
+                                        <BalancesList account='0xe87529a6123a74320e13a6dabf3606630683c029' />
                                     </div>
                                 </div>
                                 
